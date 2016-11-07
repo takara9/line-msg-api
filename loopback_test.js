@@ -17,17 +17,19 @@ var bot = new LineMsgApi({
 });
  
 
+
 bot.on(function (msg) {
 
     if (msg.events[0].message.type == 'text') {
 	// geting text message
 	console.log("Message ----");
+	console.log( msg.events[0].message.text);
 	replyMessage = msg.events[0].message.text;
 	bot.replyMessage(msg.events[0].replyToken, replyMessage);
 
 	// getting the user profile of the message sender
-	bot.getProfile(msg.events[0].source.userId ,function(err,body) {
-	    console.log("body=", body);
+	bot.getProfile(msg.events[0].source.userId ,function(err,profile) {
+	    console.log("profile= ", profile);
 	});
 
     } else if (msg.events[0].message.type == 'image') {
@@ -41,6 +43,7 @@ bot.on(function (msg) {
     } else if (msg.events[0].message.type == 'sticker') {
 	// getting a stikcer IDs
 	console.log("Sticker ----");
+	console.log(msg.events[0].message);
 	MessageObj = {
 	    "type": "sticker",
 	    "packageId": "1",
@@ -54,6 +57,3 @@ bot.on(function (msg) {
     }
 
 });
-
-
-
