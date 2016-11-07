@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/takara9/line-msg-api-nodejs.git"
+    "url": "git+https://github.com/takara9/line-msg-api.git"
   },
   "keywords": [
     "LINE",
@@ -19,9 +19,9 @@
   "author": "Maho Takara",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/takara9/line-msg-api-nodejs/issues"
+    "url": "https://github.com/takara9/line-msg-api/issues"
   },
-  "homepage": "https://github.com/takara9/line-msg-api-nodejs#readme",
+  "homepage": "https://github.com/takara9/line-msg-api#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "crypto": "0.0.3",
