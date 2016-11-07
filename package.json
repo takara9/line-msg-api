@@ -1,0 +1,33 @@
+{
+  "name": "line-msg-api",
+  "version": "1.0.0",
+  "description": "node.js library for LINE Message REST API ",
+  "main": "index.js",
+  "scripts": {
+    "test": "loopback.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takara9/line-msg-api-nodejs.git"
+  },
+  "keywords": [
+    "LINE",
+    "BOT",
+    "API",
+    "node"
+  ],
+  "author": "Maho Takara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/takara9/line-msg-api-nodejs/issues"
+  },
+  "homepage": "https://github.com/takara9/line-msg-api-nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "crypto": "0.0.3",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "superagent": "^2.3.0"
+  }
+}
