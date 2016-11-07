@@ -1,10 +1,10 @@
 {
   "name": "line-msg-api",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "node.js library for LINE Message REST API ",
   "main": "index.js",
   "scripts": {
-    "test": "loopback.js"
+    "test": "echoback_test.js"
   },
   "repository": {
     "type": "git",

@@ -1,8 +1,7 @@
 # line-msg-api
 
 Node.js package for LINE Messaging API.
-
-this code is based on LINE API https://devdocs.line.me/ja/
+this code is based on LINE API https://devdocs.line.me
 
 #How to install this
 
@@ -12,7 +11,13 @@ npm install line-msg-api
 
 
 #How to use this 
-following code is a part of loopback_test.js, please see it if you want to know more functions.
+
+please get accessToken, channelSecret from https://business.line.me/services/bot
+if you don't have the digital certificates, you can get a free digital certificates from https://letsencrypt.org
+
+
+The following code is a part of echoback_test.js, please see it if you want to know more functions.
+
 
 ```
 var LineMsgApi = require('line-msg-api');
