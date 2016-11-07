@@ -4,7 +4,7 @@ Node.js package for LINE Messaging API.
 
 this code is based on LINE API https://devdocs.line.me/ja/
 
-#How to install
+#How to install this
 
 ```
 npm install line-msg-api
@@ -12,7 +12,7 @@ npm install line-msg-api
 
 
 #How to use this 
-it is part of loopback.js. please see loopback.js
+following code is a part of loopback_test.js, please see it if you want to know more functions.
 
 ```
 var LineMsgApi = require('line-msg-api');
