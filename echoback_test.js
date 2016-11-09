@@ -15,33 +15,38 @@ var bot = new LineMsgApi({
         cert: 'Put here the file name of encript_fullchain.crt'
     }
 });
- 
 
 
+// Geting a message
 bot.on(function (msg) {
 
     if (msg.events[0].message.type == 'text') {
-	// geting text message
 	console.log("Message ----");
 	console.log( msg.events[0].message.text);
 	replyMessage = msg.events[0].message.text;
+
+	// Replying a message
 	bot.replyMessage(msg.events[0].replyToken, replyMessage);
 
-	// getting the user profile of the message sender
+	// Getting the user profile of the message sender
 	bot.getProfile(msg.events[0].source.userId ,function(err,profile) {
 	    console.log("profile= ", profile);
+	    
+	    if ( replyMessage == 'Push') {
+		// Pushing a message
+		bot.pushMessage(profile.userId, "Hello Tokyo");
+	    }
 	});
-
     } else if (msg.events[0].message.type == 'image') {
-	// getting a image file
+	// Getting a image file
 	console.log("Image ----");
 	bot.getContent(msg.events[0].message.id,"test.jpg");
     } else if (msg.events[0].message.type == 'audio') {
-	// getting a sound file
+	// Getting a sound file
 	console.log("Sound ----");
 	bot.getContent(msg.events[0].message.id,"test.au");
     } else if (msg.events[0].message.type == 'sticker') {
-	// getting a stikcer IDs
+	// Getting a stikcer IDs
 	console.log("Sticker ----");
 	console.log(msg.events[0].message);
 	MessageObj = {
@@ -51,9 +56,8 @@ bot.on(function (msg) {
 	};
 	bot.replyMessageObject(msg.events[0].replyToken, MessageObj);
     } else {
-	// getting other info
+	// Getting other info
 	console.log("Other ----");
 	console.log(msg.events[0]);
     }
-
 });

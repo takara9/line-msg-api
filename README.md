@@ -32,19 +32,26 @@ var bot = new LineMsgApi({
     }
 });
  
+// Geting a message
 bot.on(function (msg) {
 
     if (msg.events[0].message.type == 'text') {
-	// geting text message
 	console.log("Message ----");
 	console.log( msg.events[0].message.text);
 	replyMessage = msg.events[0].message.text;
+
+	// Replying a message
 	bot.replyMessage(msg.events[0].replyToken, replyMessage);
 
-    } else {
-	// getting other info
-	console.log("Other ----");
-	console.log(msg.events[0]);
+	// Getting the user profile of the message sender
+	bot.getProfile(msg.events[0].source.userId ,function(err,profile) {
+	    console.log("profile= ", profile);
+	    
+	    if ( replyMessage == 'Push') {
+		// Pushing a message
+		bot.pushMessage(profile.userId, "Hello Tokyo");
+	    }
+	});
     }
 });
 ```
