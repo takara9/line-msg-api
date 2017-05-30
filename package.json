@@ -1,10 +1,10 @@
 {
   "name": "line-msg-api",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "node.js library for LINE Message REST API ",
   "main": "index.js",
   "scripts": {
-    "test": "echoback_test.js"
+    "start": "node ./echoback_test.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "crypto": "0.0.3",
     "express": "^4.14.0",
     "fs": "0.0.1-security",
+    "http": "0.0.0",
     "https": "^1.0.0",
     "superagent": "^2.3.0"
   }
