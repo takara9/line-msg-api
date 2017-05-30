@@ -8,7 +8,6 @@ var LineMsgApi = require('line-msg-api');
 var bot = new LineMsgApi({
     accessToken: 'Put here your access token',
     channelSecret: 'Put here your channel secret',
-
     server: {
         port: 3000,
         key: 'Put here the file name of encript.key',
