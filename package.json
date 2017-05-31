@@ -1,6 +1,6 @@
 {
   "name": "line-msg-api",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "node.js library for LINE Message REST API ",
   "main": "index.js",
   "scripts": {
